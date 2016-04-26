@@ -1,0 +1,99 @@
+#any lines starting with '#' are treated as comments
+
+#the first configuration must be the the process's (main thread's) affinity: format "cpu:core_id"
+cpu:2
+
+#the second configuration must be the execution time (in second) of the whole process: format "exe:num"
+exe:6
+
+#the configuration for task susan
+#task name: "name:name"
+name:susan
+
+#task arrives time (also the arrival time of the first job): "start:value"
+#may lead mistake if 0 or other small value
+start:100
+
+#deadline for each job: "deadline:value"
+deadline:1000
+
+#task/thread's affinity: "cpu:value"
+cpu:1
+
+#period type: "period_type:value"
+#0: fixed time interval for subsequent jobs' release time
+#1: variant time interval
+period_type:0
+
+#period: "period:value"
+period:1500
+
+#number of jobs, -1 for infinity: "jobs:value"
+jobs:-1
+
+#the configuration for task qsort1D
+name:qsort1D
+start:100
+deadline:1000
+cpu:1
+period_type:1
+#the period is a random value: "period:low,high"
+period:1000,1500
+jobs:-1
+
+name:qsort3D
+start:100
+deadline:1000
+cpu:1
+period_type:0
+period:1500
+jobs:10
+
+name:solveCubic
+start:100
+deadline:1000
+cpu:1
+period_type:0
+period:1500
+jobs:-1
+
+name:rad2deg
+start:100
+deadline:1000
+cpu:1
+period_type:0
+period:1500
+jobs:-1
+
+name:deg2rad
+start:100
+deadline:1000
+cpu:1
+period_type:0
+period:1500
+jobs:-1
+
+name:ntbl_bitcount
+start:100
+deadline:1000
+cpu:1
+period_type:0
+period:1500
+jobs:-1
+
+name:bitcount
+start:100
+deadline:1000
+cpu:1
+period_type:0
+period:1500
+jobs:-1
+
+
+name:bit_count
+start:100
+deadline:1000
+cpu:1
+period_type:0
+period:1500
+jobs:-1
